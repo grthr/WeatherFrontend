@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Wetter aktuell</title>
+  </head>
+  <body bgcolor="#000000">
+  <table>
+    <tr>
+      <td>
+        <iframe
+          id="forecsat"
+          marginheight="0"
+          marginwidth="0"
+          scrolling="no"
+          width="300"
+          height="365"
+          name="FC3"
+          style="border:1px solid;border-radius:10px;border-color:transparent;"
+          src="https://api.wetteronline.de/wetterwidget?gid=10655&modeid=FC3&seourl=wuerzburg&locationname=Würzburg&lang=de"
+        ></iframe>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            window.setInterval(function() {
+                reloadIFrame()
+              }, 3000);
+            
+          
+            function reloadIFrame() {
+              document.getElementById('forecast').contentWindow.location.reload();
+            }});
+      </script>
+      </td>
+      <td>
+        <iframe
+          src="http://red-pi:3000/d-solo/jIOZRYiRz/environment?orgId=1&refresh=30s&theme=dark&panelId=11"
+          width="250"
+          height="190"
+          frameborder="0"
+        ></iframe>
+        <hr>
+        <iframe
+          src="http://red-pi:3000/d-solo/jIOZRYiRz/environment?orgId=1&refresh=30s&theme=dark&panelId=12"
+          width="250"
+          height="190"
+          frameborder="0"
+        ></iframe>
+      </td>
+      <td>
+        <iframe
+          src="http://red-pi:3000/d-solo/jIOZRYiRz/environment?orgId=1&refresh=30s&theme=dark&panelId=14"
+          width="250"
+          height="190"
+          frameborder="0"
+        ></iframe>
+        <hr>        
+        <iframe
+          src="http://red-pi:3000/d-solo/jIOZRYiRz/environment?orgId=1&refresh=30s&theme=dark&panelId=13"
+          width="250"
+          height="190"
+          frameborder="0"
+        ></iframe>
+      </td>
+    </tr>
+  </table>
+  </body>
+</html>
+
